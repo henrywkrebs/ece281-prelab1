@@ -112,8 +112,6 @@ begin
             assert w_Y = '1' report "error on August" severity failure;   
         w_sw <= x"9"; wait for 10 ns;
             assert w_Y = '0' report "error on Sep" severity failure;   
-
-        -- For 4-bit w_sw, values 10..15 must be x"A"..x"F" (NOT x"10"..)
         w_sw <= x"A"; wait for 10 ns;
             assert w_Y = '1' report "error on Oct" severity failure;  
         w_sw <= x"B"; wait for 10 ns;
